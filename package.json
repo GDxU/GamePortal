@@ -21,10 +21,9 @@
 		"orientation": "portrait"
 	},
 	"scripts": {
-		"preinstall": "cd src/packages/dclib && npm i",
 		"postinstall": "npm run favicons && npm run build && ipscend init",
 		"macos_fixes": "sudo ulimit -n 2200 && brew install watchman",
-		"start": "node scripts/start.js",
+		"start": "DC_NETWORK=ropsten node scripts/start.js",
 		"lesslint": "lessc --lint src/view/styles/app.less ",
 		"eslint_fix": "eslint --fix --ext=.js,.tag ./src",
 		"eslint": "eslint --ext=.js,.tag ./src",
@@ -89,6 +88,7 @@
 		]
 	},
 	"dependencies": {
+		"dclib": "github:DaoCasino/DCLib#dicegame",
 		"hammerjs": "^2.0.8",
 		"jquery": "^3.2.1",
 		"phantomjs-prebuilt": "^2.1.14",
@@ -119,7 +119,7 @@
 		"chalk": "2.0.1",
 		"css-loader": "^0.28.4",
 		"dotenv": "4.0.0",
-		"eslint": "4.1.1",
+		"eslint": "^4.16.0",
 		"eslint-config-standard": "^11.0.0-beta.0",
 		"eslint-loader": "1.9.0",
 		"eslint-plugin-flowtype": "2.34.1",
