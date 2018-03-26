@@ -11,7 +11,7 @@ const InterpolateHtmlPlugin   = require('react-dev-utils/InterpolateHtmlPlugin')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const eslintFormatter         = require('react-dev-utils/eslintFormatter')
 const ModuleScopePlugin       = require('react-dev-utils/ModuleScopePlugin')
-const HtmlCriticalPlugin      = require('html-critical-webpack-plugin')
+// const HtmlCriticalPlugin      = require('html-critical-webpack-plugin')
 
 const paths                   = require('./paths')
 const getClientEnvironment    = require('./env')
@@ -393,26 +393,26 @@ let webpack_prod_config = {
   }
 }
 
-if (!process.env.TRAVIS_BUILD) {
-  webpack_prod_config.plugins.push(new HtmlCriticalPlugin({
-		 /* The path of the Webpack bundle */
-    base : paths.appBuild,
-    src  : 'index.html',
-    dest : 'index.html',
+// if (!process.env.TRAVIS_BUILD) {
+//   webpack_prod_config.plugins.push(new HtmlCriticalPlugin({
+// 		 /* The path of the Webpack bundle */
+//     base : paths.appBuild,
+//     src  : 'index.html',
+//     dest : 'index.html',
 
-    inline  : true,
-    minify  : true,
-    extract : true,
+//     inline  : true,
+//     minify  : true,
+//     extract : true,
 
-    /* iPhone 6 dimensions, use whatever you like */
-    width  : 375,
-    height : 565
+//     /* iPhone 6 dimensions, use whatever you like */
+//     width  : 375,
+//     height : 565
 
-    // penthouse: {
-    // 	blockJSRequests: false,
-    // }
-  }))
-}
+//     // penthouse: {
+//     // 	blockJSRequests: false,
+//     // }
+//   }))
+// }
 
 // LESS loader
 if (process.env.enable_less) {

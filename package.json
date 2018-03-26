@@ -32,7 +32,7 @@
 		"flow": "flow",
 		"lint-staged": "lint-staged",
 		"favicons": "node scripts/favicons.js",
-		"build": "node scripts/build.js",
+		"build": "DC_NETWORK=ropsten node scripts/build.js",
 		"check_build": "serve -s build -p 9000",
 		"predeploy": "npm run eslint & npm run lint-staged &npm run coverage",
 		"deploy": "echo 'Deploy to IPFS \n this can take up to several minutes...\n' && ipscend publish",
