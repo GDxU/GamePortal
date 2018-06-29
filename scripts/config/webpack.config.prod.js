@@ -180,6 +180,14 @@ let webpack_prod_config = {
         loader : 'svg-inline-loader'
       },
 
+      {
+        test: /\.worker\.js$/,
+        loader: 'worker-loader',
+        options: {
+          inline: true
+        }
+      },
+
       // "url" loader works just like "file" loader but it also embeds
       // assets smaller than specified size as data URLs to avoid requests.
       {

@@ -88,7 +88,7 @@
 		]
 	},
 	"dependencies": {
-		"dclib": "github:DaoCasino/DCLib#dicegame",
+		"dclib": "github:DaoCasino/DCLib#dev-latest",
 		"hammerjs": "^2.0.8",
 		"jquery": "^3.2.1",
 		"phantomjs-prebuilt": "^2.1.14",
@@ -161,6 +161,7 @@
 		"webpack": "^3.0.0",
 		"webpack-dev-server": "^2.5.0",
 		"webpack-manifest-plugin": "1.1.0",
-		"whatwg-fetch": "2.0.3"
+		"whatwg-fetch": "2.0.3",
+		"worker-loader": "^2.0.0"
 	}
 }

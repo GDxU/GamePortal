@@ -177,6 +177,13 @@ let webpack_dev_config = {
         test: /\.svg$/,
         loader: 'svg-inline-loader'
       },
+      {
+        test: /\.worker\.js$/,
+        loader: 'worker-loader',
+        options: {
+          inline: true
+        }
+      },
       // "url" loader works like "file" loader except that it embeds assets
       // smaller than specified limit in bytes as data URLs to avoid requests.
       // A missing `test` is equivalent to a match.
