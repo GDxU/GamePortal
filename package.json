@@ -89,12 +89,8 @@
 	},
 	"dependencies": {
 		"dclib": "github:DaoCasino/DCLib#dev-latest",
-		"hammerjs": "^2.0.8",
-		"jquery": "^3.2.1",
 		"phantomjs-prebuilt": "^2.1.14",
 		"pug": "^2.0.0-rc.4",
-		"riot": "^3.6.1",
-		"riot-route": "^3.1.1",
 		"shelljs": "^0.8.1"
 	},
 	"devDependencies": {

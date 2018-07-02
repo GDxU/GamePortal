@@ -2,8 +2,8 @@
   globals localStorage 
 */
 
-// riot route base url set in ./src/view/app.view.js line 47
-import View       from './view/app.view.js'
+import './view/styles/app.less'
+
 import burger     from './model/frontend/burger'
 // import wingame    from './model/frontend/wingame'
 import GameWindow from './model/frontend/scrollTop'
@@ -19,8 +19,6 @@ const App = {}
 window.App = App
 
 document.addEventListener('DOMContentLoaded', () => {
-  App.view = new View()
-  App.view.start()
   App.wingame = new GameWindow()
   // App.loader = preload()
   const account_address = document.querySelector('.account-address')
